@@ -1,0 +1,25 @@
+# COdigo 3: .dockerignore de auth
+__pycache__/
+*.py[cod]
+
+*.sqlite3
+
+.env
+.env.*
+
+venv/
+.venv/
+
+.git/
+.gitignore
+
+.vscode/
+.idea/
+
+logs/
+
+media/
+
+staticfiles/
+
+*.log

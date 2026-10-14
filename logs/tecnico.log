@@ -82,3 +82,17 @@ AttributeError: 'RefreshToken' object has no attribute 'blacklist'
 [2026-10-14 12:53:43] [WARNING] [django.request] [log:246] Unauthorized: /api/users/
 [2026-10-14 12:53:47] [WARNING] [django.request] [log:246] Unauthorized: /api/users/
 [2026-10-14 12:53:52] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/token/
+[2026-10-14 13:11:24] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/token/
+[2026-10-14 13:11:25] [WARNING] [django.request] [log:246] Bad Request: /api/auth/token/
+[2026-10-14 13:11:27] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/token/
+[2026-10-14 13:11:30] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/token/refresh/
+[2026-10-14 13:11:31] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/logout/
+[2026-10-14 13:11:38] [WARNING] [django.request] [log:246] Forbidden: /api/logs/auditoria/
+[2026-10-14 13:11:39] [WARNING] [django.request] [log:246] Unauthorized: /api/logs/auditoria/
+[2026-10-14 13:11:40] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/token/refresh/
+[2026-10-14 13:11:50] [WARNING] [django.request] [log:246] Unauthorized: /api/products/
+[2026-10-14 13:11:57] [WARNING] [django.request] [log:246] Unauthorized: /api/products/
+[2026-10-14 13:12:06] [WARNING] [django.request] [log:246] Unauthorized: /api/users/
+[2026-10-14 13:12:07] [WARNING] [django.request] [log:246] Unauthorized: /api/users/
+[2026-10-14 13:12:11] [WARNING] [django.request] [log:246] Unauthorized: /api/users/
+[2026-10-14 13:12:16] [WARNING] [django.request] [log:246] Unauthorized: /api/auth/token/

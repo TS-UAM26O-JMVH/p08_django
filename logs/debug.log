@@ -1636,3 +1636,533 @@
 [2026-10-14 12:53:40] [DEBUG] [gestion_usuarios] [views:113] Intentando crear usuario: auditado
 [2026-10-14 12:53:46] [DEBUG] [gestion_usuarios] [views:55] Solicitando lista de todos los usuarios
 [2026-10-14 12:53:46] [INFO] [gestion_usuarios] [views:58] Lista de usuarios devuelta: 0 registros
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.024) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.007) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_usuarios' AND "django_content_type"."model" = 'usuario') LIMIT 21; args=('gestion_usuarios', 'usuario'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.006) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(3,); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4, 5, 6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4, 5, 6); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'blacklistedtoken') LIMIT 21; args=('token_blacklist', 'blacklistedtoken'); alias=default
+[2026-10-14 13:10:24] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'outstandingtoken') LIMIT 21; args=('token_blacklist', 'outstandingtoken'); alias=default
+[2026-10-14 13:10:25] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9, 10); alias=default
+[2026-10-14 13:10:25] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 13:10:25] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 13:10:25] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_productos' AND "django_content_type"."model" = 'productos') LIMIT 21; args=('gestion_productos', 'productos'); alias=default
+[2026-10-14 13:10:25] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2,); alias=default
+[2026-10-14 13:10:25] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 13:10:31] [DEBUG] [django.db.backends] [utils:131] (0.022) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 13:10:31] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "django_migrations" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" timestamp with time zone NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "django_content_type" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "name" varchar(100) NOT NULL, "app_label" varchar(100) NOT NULL, "model" varchar(100) NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "django_content_type" ADD CONSTRAINT "django_content_type_app_label_model_76bd3d3b_uniq" UNIQUE ("app_label", "model"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "auth_permission" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL, "codename" varchar(100) NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "auth_group" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "name" varchar(80) NOT NULL UNIQUE); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "auth_group_permissions" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "group_id" integer NOT NULL, "permission_id" integer NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "auth_user" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "password" varchar(128) NOT NULL, "last_login" timestamp with time zone NOT NULL, "is_superuser" boolean NOT NULL, "username" varchar(30) NOT NULL UNIQUE, "first_name" varchar(30) NOT NULL, "last_name" varchar(30) NOT NULL, "email" varchar(75) NOT NULL, "is_staff" boolean NOT NULL, "is_active" boolean NOT NULL, "date_joined" timestamp with time zone NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "auth_user_groups" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "user_id" integer NOT NULL, "group_id" integer NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "auth_user_user_permissions" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "user_id" integer NOT NULL, "permission_id" integer NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_permission" ADD CONSTRAINT "auth_permission_content_type_id_codename_01ab375a_uniq" UNIQUE ("content_type_id", "codename"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_permission" ADD CONSTRAINT "auth_permission_content_type_id_2f476e4b_fk_django_co" FOREIGN KEY ("content_type_id") REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_group_name_a6ea08ec_like" ON "auth_group" ("name" varchar_pattern_ops); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissions_group_id_permission_id_0cd325b0_uniq" UNIQUE ("group_id", "permission_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissions_group_id_b120cbf9_fk_auth_group_id" FOREIGN KEY ("group_id") REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissio_permission_id_84c5c92e_fk_auth_perm" FOREIGN KEY ("permission_id") REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_group_permissions_group_id_b120cbf9" ON "auth_group_permissions" ("group_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_group_permissions_permission_id_84c5c92e" ON "auth_group_permissions" ("permission_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_user_username_6821ab7c_like" ON "auth_user" ("username" varchar_pattern_ops); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_user_id_group_id_94350c0c_uniq" UNIQUE ("user_id", "group_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_user_id_6a12ed8b_fk_auth_user_id" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_group_id_97559544_fk_auth_group_id" FOREIGN KEY ("group_id") REFERENCES "auth_group" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_user_groups_user_id_6a12ed8b" ON "auth_user_groups" ("user_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_user_groups_group_id_97559544" ON "auth_user_groups" ("group_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permissions_user_id_permission_id_14a6b632_uniq" UNIQUE ("user_id", "permission_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm" FOREIGN KEY ("permission_id") REFERENCES "auth_permission" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_user_user_permissions_user_id_a95ead1b" ON "auth_user_user_permissions" ("user_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "auth_user_user_permissions_permission_id_1fbb5f2c" ON "auth_user_user_permissions" ("permission_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "django_admin_log" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "action_time" timestamp with time zone NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL, "user_id" integer NOT NULL); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "django_admin_log" ADD CONSTRAINT "django_admin_log_content_type_id_c4bce8eb_fk_django_co" FOREIGN KEY ("content_type_id") REFERENCES "django_content_type" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "django_admin_log" ADD CONSTRAINT "django_admin_log_user_id_c564eba6_fk_auth_user_id" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id"); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "django_content_type" ALTER COLUMN "name" DROP NOT NULL; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "django_content_type" DROP COLUMN "name" CASCADE; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_permission" ALTER COLUMN "name" TYPE varchar(255); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user" ALTER COLUMN "email" TYPE varchar(254); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user" ALTER COLUMN "last_login" DROP NOT NULL; (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user" ALTER COLUMN "username" TYPE varchar(150); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user" ALTER COLUMN "last_name" TYPE varchar(150); (params None)
+[2026-10-14 13:11:17] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_group" ALTER COLUMN "name" TYPE varchar(150); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "auth_user" ALTER COLUMN "first_name" TYPE varchar(150); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "gestion_productos_productos" ("id" uuid NOT NULL PRIMARY KEY, "created_at" timestamp with time zone NOT NULL, "modified_at" timestamp with time zone NOT NULL, "is_deleted" boolean NOT NULL, "deleted_at" timestamp with time zone NULL, "type" varchar(10) NOT NULL, "name" varchar(255) NOT NULL, "price" numeric(8, 2) NOT NULL, "status" boolean NOT NULL, "description" text NOT NULL, "product_key" varchar(8) NOT NULL, "image_link" varchar(200) NOT NULL); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "gestion_usuarios_usuario" ("id" uuid NOT NULL PRIMARY KEY, "password" varchar(128) NOT NULL, "last_login" timestamp with time zone NULL, "is_superuser" boolean NOT NULL, "first_name" varchar(150) NOT NULL, "last_name" varchar(150) NOT NULL, "is_active" boolean NOT NULL, "date_joined" timestamp with time zone NOT NULL, "created_at" timestamp with time zone NOT NULL, "modified_at" timestamp with time zone NOT NULL, "is_deleted" boolean NOT NULL, "deleted_at" timestamp with time zone NULL, "username" varchar(20) NOT NULL UNIQUE, "email" varchar(254) NOT NULL UNIQUE, "profile_picture" varchar(100) NULL, "email_verified" boolean NOT NULL, "email_verified_at" timestamp with time zone NULL, "nationality" varchar(7) NULL, "occupation" varchar(17) NULL, "date_of_birth" date NULL, "contact_phone_number" varchar(20) NULL, "gender" varchar(6) NULL, "address" text NULL, "address_number" varchar(25) NULL, "address_interior_number" varchar(26) NULL, "address_complement" text NULL, "address_neighborhood" varchar(100) NULL, "address_zip_code" varchar(10) NULL, "address_city" varchar(100) NULL, "address_state" varchar(100) NULL, "role" varchar(24) NULL, "reset_password_token" uuid NULL UNIQUE, "reset_password_expires_at" timestamp with time zone NULL); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "gestion_usuarios_usuario_username_c5d1d301_like" ON "gestion_usuarios_usuario" ("username" varchar_pattern_ops); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "gestion_usuarios_usuario_email_9a773cbc_like" ON "gestion_usuarios_usuario" ("email" varchar_pattern_ops); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text NOT NULL, "expire_date" timestamp with time zone NOT NULL); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "django_session_session_key_c0390e0f_like" ON "django_session" ("session_key" varchar_pattern_ops); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_date"); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "token_blacklist_blacklistedtoken" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "blacklisted_at" timestamp with time zone NOT NULL); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE TABLE "token_blacklist_outstandingtoken" ("id" integer NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "jti" uuid NOT NULL UNIQUE, "token" text NOT NULL, "created_at" timestamp with time zone NOT NULL, "expires_at" timestamp with time zone NOT NULL, "user_id" integer NOT NULL); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_blacklistedtoken" ADD COLUMN "token_id" integer NOT NULL UNIQUE CONSTRAINT "token_blacklist_blac_token_id_3cc7fe56_fk_token_bla" REFERENCES "token_blacklist_outstandingtoken"("id") DEFERRABLE INITIALLY DEFERRED; SET CONSTRAINTS "token_blacklist_blac_token_id_3cc7fe56_fk_token_bla" IMMEDIATE; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ADD CONSTRAINT "token_blacklist_outs_user_id_83bc629a_fk_auth_user" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "token_blacklist_outstandingtoken_user_id_83bc629a" ON "token_blacklist_outstandingtoken" ("user_id"); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ADD COLUMN "jti_hex" varchar(255) NULL; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ALTER COLUMN "jti_hex" SET NOT NULL; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ADD CONSTRAINT "token_blacklist_outstandingtoken_jti_hex_d9bdf6f7_uniq" UNIQUE ("jti_hex"); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] CREATE INDEX "token_blacklist_outstandingtoken_jti_hex_d9bdf6f7_like" ON "token_blacklist_outstandingtoken" ("jti_hex" varchar_pattern_ops); (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" DROP COLUMN "jti" CASCADE; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" RENAME COLUMN "jti_hex" TO "jti"; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ALTER COLUMN "created_at" DROP NOT NULL; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] SET CONSTRAINTS "token_blacklist_outs_user_id_83bc629a_fk_auth_user" IMMEDIATE; ALTER TABLE "token_blacklist_outstandingtoken" DROP CONSTRAINT "token_blacklist_outs_user_id_83bc629a_fk_auth_user"; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ALTER COLUMN "user_id" DROP NOT NULL; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ADD CONSTRAINT "token_blacklist_outs_user_id_83bc629a_fk_auth_user" FOREIGN KEY ("user_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_blacklistedtoken" ALTER COLUMN "id" TYPE bigint USING "id"::bigint; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER SEQUENCE IF EXISTS "token_blacklist_blacklistedtoken_id_seq" AS bigint; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] SET CONSTRAINTS "token_blacklist_blac_token_id_3cc7fe56_fk_token_bla" IMMEDIATE; ALTER TABLE "token_blacklist_blacklistedtoken" DROP CONSTRAINT "token_blacklist_blac_token_id_3cc7fe56_fk_token_bla"; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_outstandingtoken" ALTER COLUMN "id" TYPE bigint USING "id"::bigint; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER SEQUENCE IF EXISTS "token_blacklist_outstandingtoken_id_seq" AS bigint; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_blacklistedtoken" ALTER COLUMN "token_id" TYPE bigint USING "token_id"::bigint; (params None)
+[2026-10-14 13:11:18] [DEBUG] [django.db.backends.schema] [schema:188] ALTER TABLE "token_blacklist_blacklistedtoken" ADD CONSTRAINT "token_blacklist_blacklistedtoken_token_id_3cc7fe56_fk" FOREIGN KEY ("token_id") REFERENCES "token_blacklist_outstandingtoken" ("id") DEFERRABLE INITIALLY DEFERRED; (params None)
+[2026-10-14 13:11:46] [DEBUG] [gestion_productos] [views:108] Intentando crear producto: TEST0001
+[2026-10-14 13:11:49] [DEBUG] [gestion_productos] [views:108] Intentando crear producto: AUD00001
+[2026-10-14 13:11:53] [DEBUG] [gestion_productos] [views:108] Intentando crear producto: DEL00001
+[2026-10-14 13:11:53] [DEBUG] [gestion_productos] [views:215] Intentando eliminar producto id=d4f33d45-c370-4e7c-a4c4-319d29e957e8
+[2026-10-14 13:11:56] [DEBUG] [gestion_productos] [views:50] Solicitando lista de todos los productos
+[2026-10-14 13:11:56] [INFO] [gestion_productos] [views:53] Lista de productos devuelta: 0 registros
+[2026-10-14 13:12:00] [DEBUG] [gestion_usuarios] [views:113] Intentando crear usuario: nuevo_usuario
+[2026-10-14 13:12:04] [DEBUG] [gestion_usuarios] [views:113] Intentando crear usuario: auditado
+[2026-10-14 13:12:10] [DEBUG] [gestion_usuarios] [views:55] Solicitando lista de todos los usuarios
+[2026-10-14 13:12:10] [INFO] [gestion_usuarios] [views:58] Lista de usuarios devuelta: 0 registros
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.024) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.008) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_usuarios' AND "django_content_type"."model" = 'usuario') LIMIT 21; args=('gestion_usuarios', 'usuario'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.006) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(3,); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4, 5, 6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4, 5, 6); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'blacklistedtoken') LIMIT 21; args=('token_blacklist', 'blacklistedtoken'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'outstandingtoken') LIMIT 21; args=('token_blacklist', 'outstandingtoken'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9, 10); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_productos' AND "django_content_type"."model" = 'productos') LIMIT 21; args=('gestion_productos', 'productos'); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2,); alias=default
+[2026-10-14 14:46:38] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 14:46:45] [DEBUG] [django.db.backends] [utils:131] (0.020) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:46:45] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.024) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.011) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.006) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_usuarios' AND "django_content_type"."model" = 'usuario') LIMIT 21; args=('gestion_usuarios', 'usuario'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.004) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(3,); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4, 5, 6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4, 5, 6); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'blacklistedtoken') LIMIT 21; args=('token_blacklist', 'blacklistedtoken'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'outstandingtoken') LIMIT 21; args=('token_blacklist', 'outstandingtoken'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9, 10); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_productos' AND "django_content_type"."model" = 'productos') LIMIT 21; args=('gestion_productos', 'productos'); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2,); alias=default
+[2026-10-14 14:55:20] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 14:55:27] [DEBUG] [django.db.backends] [utils:131] (0.020) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:55:27] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.024) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.008) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_usuarios' AND "django_content_type"."model" = 'usuario') LIMIT 21; args=('gestion_usuarios', 'usuario'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.006) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (3) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(3,); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (4, 5, 6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(4, 5, 6); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(7,); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (8) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'rest_framework_simplejwt'; args=('rest_framework_simplejwt',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'blacklistedtoken') LIMIT 21; args=('token_blacklist', 'blacklistedtoken'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'token_blacklist' AND "django_content_type"."model" = 'outstandingtoken') LIMIT 21; args=('token_blacklist', 'outstandingtoken'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (9, 10) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9, 10); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'token_blacklist'; args=('token_blacklist',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_productos' AND "django_content_type"."model" = 'productos') LIMIT 21; args=('gestion_productos', 'productos'); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2,); alias=default
+[2026-10-14 14:57:44] [DEBUG] [django.db.backends] [utils:131] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_productos'; args=('gestion_productos',); alias=default
+[2026-10-14 14:57:51] [DEBUG] [django.db.backends] [utils:131] (0.023) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-14 14:57:51] [DEBUG] [django.db.backends] [utils:131] (0.003) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
