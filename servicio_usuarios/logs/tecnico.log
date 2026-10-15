@@ -1,0 +1,4 @@
+[2026-10-15 00:24:28] [WARNING] [django.request] [log:249] Unauthorized: /api/usuarios/users/
+[2026-10-15 00:24:28] [WARNING] [django.server] [log:249] "POST /api/usuarios/users/ HTTP/1.1" 401 58
+[2026-10-15 00:28:32] [WARNING] [django.request] [log:249] Unauthorized: /api/usuarios/users/
+[2026-10-15 00:28:32] [WARNING] [django.server] [log:249] "GET /api/usuarios/users/ HTTP/1.1" 401 58

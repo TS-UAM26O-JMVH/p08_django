@@ -262,3 +262,190 @@
                 AND pg_catalog.pg_table_is_visible(c.oid)
         ; args=None; alias=default
 [2026-10-14 23:59:22] [DEBUG] [django.db.backends] [utils:151] (0.004) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.021) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.007) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_usuarios' AND "django_content_type"."model" IN ('usuario')); args=('gestion_usuarios', 'usuario'); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.005) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2,); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.003) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('user', 'permission', 'group')); args=('auth', 'user', 'permission', 'group'); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.003) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (3, 4, 5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(3, 4, 5); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6,); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(7,); alias=default
+[2026-10-15 00:23:26] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-15 00:23:36] [DEBUG] [django.db.backends] [utils:151] (0.021) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:23:36] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:23:36] [DEBUG] [django.db.backends] [utils:151] (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:23:36] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:29:13] [DEBUG] [gestion_usuarios] [views:55] Solicitando lista de todos los usuarios
+[2026-10-15 00:29:13] [DEBUG] [django.db.backends] [utils:151] (0.006) SELECT "gestion_usuarios_usuario"."id", "gestion_usuarios_usuario"."password", "gestion_usuarios_usuario"."last_login", "gestion_usuarios_usuario"."is_superuser", "gestion_usuarios_usuario"."first_name", "gestion_usuarios_usuario"."last_name", "gestion_usuarios_usuario"."is_active", "gestion_usuarios_usuario"."date_joined", "gestion_usuarios_usuario"."created_at", "gestion_usuarios_usuario"."modified_at", "gestion_usuarios_usuario"."is_deleted", "gestion_usuarios_usuario"."deleted_at", "gestion_usuarios_usuario"."username", "gestion_usuarios_usuario"."email", "gestion_usuarios_usuario"."profile_picture", "gestion_usuarios_usuario"."email_verified", "gestion_usuarios_usuario"."email_verified_at", "gestion_usuarios_usuario"."nationality", "gestion_usuarios_usuario"."occupation", "gestion_usuarios_usuario"."date_of_birth", "gestion_usuarios_usuario"."contact_phone_number", "gestion_usuarios_usuario"."gender", "gestion_usuarios_usuario"."address", "gestion_usuarios_usuario"."address_number", "gestion_usuarios_usuario"."address_interior_number", "gestion_usuarios_usuario"."address_complement", "gestion_usuarios_usuario"."address_neighborhood", "gestion_usuarios_usuario"."address_zip_code", "gestion_usuarios_usuario"."address_city", "gestion_usuarios_usuario"."address_state", "gestion_usuarios_usuario"."role", "gestion_usuarios_usuario"."reset_password_token", "gestion_usuarios_usuario"."reset_password_expires_at" FROM "gestion_usuarios_usuario"; args=(); alias=default
+[2026-10-15 00:29:13] [INFO] [gestion_usuarios] [views:58] Lista de usuarios devuelta: 0 registros
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.023) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.006) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'gestion_usuarios' AND "django_content_type"."model" IN ('usuario')); args=('gestion_usuarios', 'usuario'); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.004) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(1,); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'gestion_usuarios'; args=('gestion_usuarios',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" IN ('logentry')); args=('admin', 'logentry'); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(2,); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" IN ('user', 'permission', 'group')); args=('auth', 'user', 'permission', 'group'); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.007) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (3, 4, 5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(3, 4, 5); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" IN ('contenttype')); args=('contenttypes', 'contenttype'); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.002) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(6,); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" IN ('session')); args=('sessions', 'session'); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "auth_permission"."content_type_id" AS "content_type", "auth_permission"."codename" AS "codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (7) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, 2 ASC; args=(7,); alias=default
+[2026-10-15 00:31:50] [DEBUG] [django.db.backends] [utils:151] (0.001) SELECT "django_content_type"."model" AS "model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2026-10-15 00:31:59] [DEBUG] [django.db.backends] [utils:151] (0.037) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END,
+                obj_description(c.oid, 'pg_class')
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+[2026-10-15 00:31:59] [DEBUG] [django.db.backends] [utils:151] (0.008) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default

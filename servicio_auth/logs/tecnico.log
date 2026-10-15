@@ -1,0 +1,6 @@
+[2026-10-15 00:11:07] [WARNING] [django.request] [log:249] Unauthorized: /api/auth/logs/tecnico/
+[2026-10-15 00:11:07] [WARNING] [django.server] [log:249] "GET /api/auth/logs/tecnico/ HTTP/1.1" 401 58
+[2026-10-15 00:11:32] [WARNING] [django.request] [log:249] Unauthorized: /api/auth/auth/logout/
+[2026-10-15 00:11:32] [WARNING] [django.server] [log:249] "POST /api/auth/auth/logout/ HTTP/1.1" 401 58
+[2026-10-15 00:15:52] [WARNING] [django.request] [log:249] Unauthorized: /api/auth/auth/token/
+[2026-10-15 00:15:52] [WARNING] [django.server] [log:249] "POST /api/auth/auth/token/ HTTP/1.1" 401 68

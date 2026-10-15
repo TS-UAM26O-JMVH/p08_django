@@ -1,0 +1,4 @@
+[2026-10-15 00:22:24] [WARNING] [django.request] [log:249] Unauthorized: /api/productos/products/
+[2026-10-15 00:22:24] [WARNING] [django.server] [log:249] "GET /api/productos/products/ HTTP/1.1" 401 58
+[2026-10-15 00:28:22] [WARNING] [django.request] [log:249] Unauthorized: /api/productos/products/
+[2026-10-15 00:28:22] [WARNING] [django.server] [log:249] "GET /api/productos/products/ HTTP/1.1" 401 58
